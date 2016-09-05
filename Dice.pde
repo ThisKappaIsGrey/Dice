@@ -1,14 +1,13 @@
 Die kappa;
 void setup()
 {
-  kappa = new Die(50, 50);
 	noLoop();
   size(500,500);
+  kappa = new Die(250, 250);
 }
 void draw()
 {
 	//your code here
-  background(255);
   kappa.show();
   kappa.roll();
 }
@@ -20,17 +19,17 @@ class Die //models one single dice cube
 {
 	//variable declarations here
   int rollResult, theX, theY;
-	Die(int x, int y) //constructor
+	Die(int x, int y) //constructor;
 	{
 		//variable initializations here
     roll();
-    int theX = x;
-    int theY = y;
+    theX = x;
+    theY = y;
 	}
 	void roll()
 	{
 		//your code here
-    rollResult = (int)(Math.random() * 7);
+    rollResult = (int)(Math.random() * 6) + 1;
 	}
 	void show()
 	{
