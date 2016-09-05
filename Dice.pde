@@ -52,13 +52,12 @@ class Die //models one single dice cube
     ellipse(theX + 10, theY + 10, 10, 10);
     ellipse(theX + 40, theY + 40, 10, 10);
   }else if(rollResult == 3){
-    //3 has a visual bug. when looped, it only shows 2 dots instead of 3.
     fill(255);
     rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 10, theY + 10, 10, 10);
+    ellipse(theX + 40, theY + 40, 10, 10);
     ellipse(theX + 25, theY + 25, 10, 10);
-    ellipse(theY + 40, theY + 40, 10, 10);
   }else if(rollResult == 4){
     fill(255);
     rect(theX, theY, 50, 50);
