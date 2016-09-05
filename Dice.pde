@@ -1,20 +1,21 @@
-Die kappa;
 void setup()
 {
 	noLoop();
   size(500,500);
-  kappa = new Die(250, 250);
 }
 void draw()
 {
 	//your code here
-  kappa.show();
+  for(int x = 0; x < 500; x+= 50){
+  Die kappa = new Die(x, 0);
   kappa.roll();
+  kappa.show();
 }
-void mousePressed()
+}
+/*void mousePressed()
 {
 	redraw();
-}
+}*/
 class Die //models one single dice cube
 {
 	//variable declarations here
