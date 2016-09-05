@@ -1,21 +1,27 @@
+Die kappa;
 void setup()
 {
 	noLoop();
   size(500,500);
+  //kappa = new Die(225, 225);
 }
 void draw()
 {
 	//your code here
-  for(int x = 0; x < 500; x+= 50){
-  Die kappa = new Die(x, 0);
+  /*kappa.roll();
+  kappa.show();*/
+for(int y = 0; y <= 500; y+= 50){
+for(int x = 0; x <= 500; x+= 50){
+  Die kappa = new Die(x, y);
   kappa.roll();
   kappa.show();
 }
 }
-/*void mousePressed()
+}
+void mousePressed()
 {
 	redraw();
-}*/
+}
 class Die //models one single dice cube
 {
 	//variable declarations here
@@ -23,33 +29,38 @@ class Die //models one single dice cube
 	Die(int x, int y) //constructor;
 	{
 		//variable initializations here
-    roll();
     theX = x;
     theY = y;
 	}
 	void roll()
 	{
 		//your code here
-    rollResult = (int)(Math.random() * 6) + 1;
+    rollResult = (int)((Math.random() * 6) + 1);
+    //System.out.println("roll =" + rollResult);
 	}
 	void show()
 	{
     if (rollResult == 1){
+    fill(255);
 		rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 25,theY + 25, 10, 10);
   } else if(rollResult == 2){
+    fill(255);
     rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 10, theY + 10, 10, 10);
     ellipse(theX + 40, theY + 40, 10, 10);
   }else if(rollResult == 3){
+    //3 has a visual bug. when looped, it only shows 2 dots instead of 3.
+    fill(255);
     rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 10, theY + 10, 10, 10);
     ellipse(theX + 25, theY + 25, 10, 10);
     ellipse(theY + 40, theY + 40, 10, 10);
   }else if(rollResult == 4){
+    fill(255);
     rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 10, theY + 10, 10, 10);
@@ -57,6 +68,7 @@ class Die //models one single dice cube
     ellipse(theX + 10, theY + 40, 10, 10);
     ellipse(theX + 40, theY + 40, 10, 10);
   }else if(rollResult == 5){
+    fill(255);
     rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 10, theY + 10, 10, 10);
@@ -64,7 +76,8 @@ class Die //models one single dice cube
     ellipse(theX + 10, theY + 40, 10, 10);
     ellipse(theX + 40, theY + 40, 10, 10);
     ellipse(theX + 25, theY + 25, 10, 10);
-  }else if(rollResult == 6){
+  }else{
+    fill(255);
     rect(theX, theY, 50, 50);
     fill(0);
     ellipse(theX + 10, theY + 10, 10, 10);
