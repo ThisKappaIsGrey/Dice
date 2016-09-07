@@ -1,5 +1,5 @@
 Die kappa;
-int sum;
+int sum, totalThree;
 void setup()
 {
 	noLoop();
@@ -10,6 +10,7 @@ void draw()
 {
 	//your code here
 sum = 0;
+totalThree = 0;
 background((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
 for(int y = 0; y <= 400; y+= 70){
 for(int x = 0; x <= 500; x+= 75){
@@ -17,11 +18,15 @@ for(int x = 0; x <= 500; x+= 75){
   kappa.roll();
   kappa.show();
   sum = sum + kappa.rollResult;
+  if(kappa.rollResult == 3){
+    totalThree++;
+  }
 }
 }
 fill(0);
 textSize(30);
 text("sum of dice values = " +sum, 100, 475);
+text("total of three is " + totalThree, 100, 450);
 }
 void mousePressed()
 {
