@@ -9,10 +9,10 @@ void setup()
 void draw()
 {
 	//your code here
-  /*kappa.roll();
-  kappa.show();*/
-for(int y = 0; y <= 400; y+= 50){
-for(int x = 0; x <= 500; x+= 50){
+sum = 0;
+background((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
+for(int y = 0; y <= 400; y+= 70){
+for(int x = 0; x <= 500; x+= 75){
   Die kappa = new Die(x, y);
   kappa.roll();
   kappa.show();
@@ -20,7 +20,8 @@ for(int x = 0; x <= 500; x+= 50){
 }
 }
 fill(0);
-text("sum of dice values = " +sum, 250, 475);
+textSize(30);
+text("sum of dice values = " +sum, 100, 475);
 }
 void mousePressed()
 {
