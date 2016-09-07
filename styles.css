@@ -6,8 +6,7 @@ body {
 =======
     background-color: rgb(0,100,200);
     color: rgb(100,100,0);
->>>>>>> 38bcc5565db1ae22455ceaac6351382e928c9232
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     text-align: center;
 }
 
@@ -23,5 +22,5 @@ header {
 
 footer {
 	font-style: italic;
-	font-size: 200%;
+	font-size: 100%;
 }
