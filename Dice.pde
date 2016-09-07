@@ -11,11 +11,6 @@ void draw()
 	//your code here
   /*kappa.roll();
   kappa.show();*/
-<<<<<<< HEAD
-=======
-background(255);
-sum = 0;
->>>>>>> 38bcc5565db1ae22455ceaac6351382e928c9232
 for(int y = 0; y <= 400; y+= 50){
 for(int x = 0; x <= 500; x+= 50){
   Die kappa = new Die(x, y);
